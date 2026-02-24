@@ -12,3 +12,8 @@ release/
 /game/wi.xcodeproj/project.xcworkspace/
 /game/wi.xcodeproj/xcuserdata/
 /DerivedData/
+
+# Gradle / Android Studio
+.gradle/
+local.properties
+**/build/
