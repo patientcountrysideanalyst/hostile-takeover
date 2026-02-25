@@ -6,6 +6,7 @@ plugins {
 android {
     namespace = "com.spiffcode.ht"
     compileSdk = 35
+    ndkVersion = "21.4.7075529"
 
     defaultConfig {
         applicationId = "com.spiffcode.ht"

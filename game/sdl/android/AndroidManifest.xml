@@ -29,10 +29,12 @@
                  android:multiArch="false"
                  android:hardwareAccelerated="true"
                  android:allowClearUserData="true">
-        <activity android:name="GameActivity" 
-            	android:screenOrientation="sensorLandscape"
-            	android:windowSoftInputMode="adjustResize"
-            	android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity
+            android:name="GameActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
