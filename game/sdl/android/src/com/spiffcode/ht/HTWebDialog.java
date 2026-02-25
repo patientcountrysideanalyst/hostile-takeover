@@ -76,22 +76,17 @@ public class HTWebDialog extends Dialog implements android.view.View.OnClickList
 	@Override
 	public void onClick(View v) {
 		// Deal with button clicks
-	    switch (v.getId()) {
-	    case R.id.btn_done:
-	    	dismiss();
-	    	break;
-	    case R.id.btn_back:
-	    	if (webView.canGoBack()) {
-	    		webView.goBack();
-	    	}
-	    	break;
-	    case R.id.btn_forward:
-	    	if (webView.canGoForward()) {
-	    		webView.goForward();
-	    	}
-	    	break;
-	    default:
-	    	break;
-	    }
+		int id = v.getId();
+		if (id == R.id.btn_done) {
+			dismiss();
+		} else if (id == R.id.btn_back) {
+			if (webView.canGoBack()) {
+				webView.goBack();
+			}
+		} else if (id == R.id.btn_forward) {
+			if (webView.canGoForward()) {
+				webView.goForward();
+			}
+		}
 	}
 }

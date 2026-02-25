@@ -154,19 +154,14 @@ public class ChatDialog extends Dialog implements android.view.View.OnClickListe
 	@Override
 	public void onClick(View v) {
 		// Deal with button clicks
-	    switch (v.getId()) {
-	    case R.id.btn_done:
-	    	dismiss();
-	    	break;
-	    case R.id.btn_players:
-	    	NativeLib.chatc.nativeOnPlayers();
-	    	break;
-	    case R.id.btn_send:
-	    	sendChat();
-	    	break;
-	    default:
-	    	break;
-	    }
+		int id = v.getId();
+		if (id == R.id.btn_done) {
+			dismiss();
+		} else if (id == R.id.btn_players) {
+			NativeLib.chatc.nativeOnPlayers();
+		} else if (id == R.id.btn_send) {
+			sendChat();
+		}
 	}
 	
 	public void addChat(String player, String chat, int sig) {	
